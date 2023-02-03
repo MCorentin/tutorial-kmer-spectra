@@ -777,9 +777,12 @@ heterozygous regions (with a frequency of 6: “ACT”, “AGT”, “CAC”, �
 <h2 id="what-now">What now?</h2>
 <p>From the number of peaks, and the height of the heterozygous peak,
 you can estimate how heterozygous the genome is.</p>
-<p>Based on the assumption that each k-mer maps uniquely to the genome,
-the occurence of the homozygous peak (ie: its position on the x-axis)
-should represent the coverage of your sequencing data.</p>
+<p>Moreover, you can estimate the genome coverage of your sequencing
+data based on the k-mer coverage (the x position of the homozygous
+peak), the formula for this is:</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAAoBAMAAADd+MOYAAAAMFBMVEX///8AAADu7u6IiIhUVFR2dnbc3NyYmJgiIiK6uroyMjJERESqqqpmZmbMzMwQEBDo/O5xAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACHElEQVRIDZ2Uv2vbQBTHv3Ii/0qx3ZYmZGhRKd06OLjO0JChEC/J4pIOhkBx8JrBplBChg6GDKZQ5KnQJQ7EZHXG0sVQyJzB2Z0hU6Cl5B/oe7q7yidZsqw33LvvvffV6U72BwiJF5VSspi7sCZbak+rkzJgnuoANRsnWnlpoMkAUbOALvBeKxtFTU4XqWVazwLnWvlmrMnp4jk/3wSeiXJOpLXpzfrqO8vRmULuI0/yjsKOSOHjF1E2B7//0OzzUrLJC/diNXx8IsrZD/Yrmt2Vj2xKydVwk6iucBrC+CFki4+OVAHIiIWQ8Zg76+jeDrjprrwxprTYAy4ph8cbKh8Ae+jw5dJZedt8FbgK91E1W0WmyZ/16wPuFTe8b2ORFmUkXu8WG0pM5s3ddZJt/BryqnNC8/R676/F0olDGyb9WmOE2aYnFmIYgVadbL041sRjdlXjWM1HcVyOJz1Q1tEWRUWpCNmI9a7Og40mJeebu/s8jBRI866fXNscs4Ue/ZOGoJj7rOgD39gZIxauS/UYtkCLF9Qejgf6qOADtc5x4Ps4yO4DteJ4QjgawTj2VRTHU7bwGoG7+kAtOY7ZVi+oFccjWL2glhwnRM56YR+oJccjWCWoMz85mnQxkuOjre0z8b8MvCYfqCXHI+zqA7XkeASrDmp6YcVx95rkdYmv7I4eUFNBcVxZX77tj93+aDP1caJ1a10J67/8B+3gcDpLxEb6AAAAAElFTkSuQmCC" title="C = \frac{Ck * L}{L - k + 1}" alt="C = \frac{Ck * L}{L - k + 1}" /></p>
+<p>where C is the read coverage, Ck is the k-mer coverage, L is the
+length of the read and k the k-mer size.</p>
 <p>You can also estimate the genome size from the k-mer count. A good
 tutorial for this is available here: <a href="https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/">https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/</a></p>
 

@@ -197,6 +197,10 @@ One at x = 3 (6 divided by 2), corresponding to k-mers from heterozygous regions
 
 From the number of peaks, and the height of the heterozygous peak, you can estimate how heterozygous the genome is.
 
-Based on the assumption that each k-mer maps uniquely to the genome, the occurence of the homozygous peak (ie: its position on the x-axis) should represent the coverage of your sequencing data.
+Moreover, you can estimate the genome coverage of your sequencing data based on the k-mer coverage (the x position of the homozygous peak), the formula for this is: 
+
+$C = \frac{Ck * L}{L - k + 1}$ 
+
+where C is the read coverage, Ck is the k-mer coverage, L is the length of the read and k the k-mer size.
 
 You can also estimate the genome size from the k-mer count. A good tutorial for this is available here: <https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/>
