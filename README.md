@@ -60,7 +60,7 @@ plot(density(kmer_counts), main = "k-mer spectrum",
      xlab = "Occurence of k-mer", ylab = "Frequency of k-mers")
 ```
 
-![](kmer_spectra_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Since each k-mer is unique, the occurence (x-axis) of each k-mer is 1.
 So the k-mer spectrum has a peak at x = 1. The height of the peak
@@ -94,10 +94,10 @@ for(j in c(1:length(reads))){
 print(kmers)
 ```
 
-    ##  [1] "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA"
-    ## [13] "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG" "AGT" "GTC"
-    ## [25] "TCG" "CGA" "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG"
-    ## [37] "AGT" "GTC" "TCG" "CGA" "GAT" "ATT"
+    ##  [1] "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG" "AGT" "GTC" "TCG"
+    ## [12] "CGA" "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG"
+    ## [23] "AGT" "GTC" "TCG" "CGA" "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA"
+    ## [34] "GAT" "ATT" "CAG" "AGT" "GTC" "TCG" "CGA" "GAT" "ATT"
 
 Obviously, we now have multiple copies of the same k-mers (they are
 coming from copies of the same read). This can be checked by the unique
@@ -120,7 +120,7 @@ plot(density(kmer_counts), main = "k-mer spectrum",
      xlab = "Occurence of k-mer", ylab = "Frequency of k-mers")
 ```
 
-![](kmer_spectra_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 Since we have 6 copies of the same read, we have 6 copies of each k-mer.
 On the k-mer spectrum this is represented by a peak at x = 6. The
@@ -168,7 +168,7 @@ plot(density(kmer_counts), main = "k-mer spectrum",
      xlab = "Occurence of k-mer", ylab = "Frequency of k-mers")
 ```
 
-![](kmer_spectra_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 This is represented on the k-mer spectrum with a peak at x = 1. There is
 another peak at x = 6, because one of the k-mers (GAT) has been replaced
@@ -177,7 +177,7 @@ by (TAG) due to the sequencing error.
 With real datasets, since we are dealing with so many reads, errors are
 represented as a large peak at the start of the spectrum:
 
-![](kmer_spectra_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 The left part of the plot corresponds to k-mers with very low copies
 (likely to come from sequencing errors), and this part of the plot if
@@ -233,7 +233,7 @@ plot(density(kmer_counts), main = "k-mer spectrum",
      xlab = "Occurence of k-mer", ylab = "Frequency of k-mers")
 ```
 
-![](kmer_spectra_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 We can see two peaks:
 

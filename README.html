@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="what-is-a-k-mer-spectrum">What is a k-mer spectrum?</h1>
+<p>Corentin Molitor 2023-02-02</p>
+<h2 id="k-mer-spectrum">k-mer spectrum</h2>
+<p>A K-mer spectrum is a representation of the k-mer content of your
+sequencing data (or genome). They are useful to both estimate the genome
+size and the % of heterozygosity of your sample.</p>
+<p>A k-mer spectrum represents how many unique k-mers (sequences) are
+present a certain number of copies in the data.</p>
+<h2 id="building-a-k-mer-spectrum-from-a-single-read">Building a k-mer
+spectrum from a single read</h2>
+<p>If we have a single read, then we obtain “L - k + 1” k-mers, where L
+is the length of the read and k is the k-mer size.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>read <span class="ot">&lt;-</span> <span class="st">&quot;CAGTCGATT&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>kmers <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nchar</span>(read)<span class="sc">-</span>k<span class="sc">+</span><span class="dv">1</span>))) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  kmers <span class="ot">&lt;-</span> <span class="fu">c</span>(kmers, <span class="fu">substr</span>(<span class="at">x =</span> read, <span class="at">start =</span> i, <span class="at">stop =</span> i<span class="sc">+</span>k<span class="dv">-1</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;CAGTCGATT&quot;
+
+## [1] &quot;CAG&quot;
+## [1] &quot; AGT&quot;
+## [1] &quot;  GTC&quot;
+## [1] &quot;   TCG&quot;
+## [1] &quot;    CGA&quot;
+## [1] &quot;     GAT&quot;
+## [1] &quot;      ATT&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">table</span>(kmers))</span></code></pre></div>
+<pre><code>## kmers
+## AGT ATT CAG CGA GAT GTC TCG 
+##   1   1   1   1   1   1   1</code></pre>
+<p>From the original read, we obtained 7 unique k-mers, each with an
+occurence of 1 (this might not always be the case and is dependent on
+the k-mer size and complexity of the original sequence, a larger k
+increasing the probability of each k-mer being unique, at the expense of
+increased computational cost).</p>
+<p>Now that we have the k-mers, we can plot their density:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>kmer_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(kmers)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(kmer_counts), <span class="at">main =</span> <span class="st">&quot;k-mer spectrum&quot;</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Occurence of k-mer&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frequency of k-mers&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAAAulBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZrY6AAA6ADo6AGY6OgA6Ojo6OmY6OpA6ZpA6ZrY6kLY6kNtmAABmADpmOgBmOjpmZgBmkLZmkNtmtrZmtttmtv+QOgCQOmaQZgCQZjqQkGaQkNuQtpCQttuQtv+Q2/+2ZgC2Zjq2ZpC2kDq227a229u22/+2/9u2//++vr7bkDrbkGbbtmbbtpDb29vb2//b/7bb////tmb/25D/27b//7b//9v////zvRX5AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAVmklEQVR4nO2dC3fjthGF6c3a3qZtUivpI7HbpGmttMlmq6QPSyvx//+tEnyJss0XgAHuAPc7J7teGSJnRl9AEqSAoiQEmCJ2AIRMQUEJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBR0nG3x5kOI/Zz+EWQ3OqGg4wQS9OOXYf4/0AkFHSeQoKE6ap1Q0HFqc46b4s375t/Vjzf//rS4+rr8+bZ4+2heOn1fFFefP1U/7Yqr777sm/78afX6Z++bjfzw+6J4+/6yeVn+UjX55GvToOLNh+79ja7Vru5e219+UNBxjCunh+KqU6MSpuHTxqn+lbcfjKCG60a+5h91k237HrOVQfPu9buzoM37LwV9tr8MoaDjVK789FAU992/jTB35S+VLF8bBe/qFu/Lw635sXrh+n35n67hzZNpWDcxbaqfby6a74vid08fN0a7Rsnu/c8EvdxfhlDQcSpX/jD0ohKm6iGbP2vNao2MW5VTu4HJ1S/f/thvpH7deDds3lr52Y/lWdD7dqcDQS/3lyMUdJxtd2huDrbX/9uYbvBY/1kLU/3RH79351OBsjovqPjkj09lfwlkfj1oXrVozwbOgjbvf3YOerG/HKGg42z708oRQffF64KWH79sXv57L2jV9H7QvBL05rybl4J2HTQFpaDjVIJe/7M+8o73oP1h/ULQStFvP23kvuxBu+ZzPSgF7aCg47Tnjb1JL4Rpfmx4JmjF6S/NyebwHPRZt7n/zd+eC9r8vS8oaAMFHac2Z3+++HkpzNYMUn6sHR4KWl+im+N83YMOr+L75lWTz59O9RhB886zoNWGPz5Q0BYKOk4t6OBg/FKYdqRyKFjN9+exz24cdDBsWjdsX7+pdW4G6uv391dSFLSGgo4zOB2seUWYj99UPtV3jC4P8eY2UfGb9k7ST9+0bQbN2ztJfyqb20tv3/fvP1QXWJ/9wKv4FgoqDO+0u0FBhaGgblBQYSioGxRUGArqBgUl0FBQAg0FJdBQUAINBSXQUFACDQUl0FBQAg0FJdBQUAINBSXQUFACDQUl0FBQAg0FJdBQUAINBSXQUFACDQUl0FBQAg0FJdBQUAINBSXQUFACDQUl0FBQAg0FJdB4FrQgZBGxBPW7OZIqFJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBYVhzXy8fKCgC/U3nVXefs4CCRueFknR0AAWNy4iMdLSDgkZlogysUA0Fjch0N8lO1EBBozEvIBWloPFYVAGWiYJGYmEBWCfvDaNsThsrvmqTe6W8N4yyOWWsyp6l8tswyuZ0sTJ51sprwyibU8Xq3Fksnw2jbE4TFqmzWh4b1mzffCgPt0Vx9ehlcylhlTnL5a+hofbzXSXncXPvYXMpYZk46+WtYWm0vKskvTE/7q6fnDeXEtZ5s2C+GpZNv3l6uDM/7qu+1HVzCeGQNivmqaHB9J479qAvcMqaJfPT0HDcvPlQd6H7saukLKvtmDRr5qVhw76ZO+/G0+aSwDlnFs1Hwyib04B7yhkWjYKGw0PKrJqHhpfseBXf4iVjls294fRWVs/snAqeEmbdnBtG2Rw83vJl4VwbRtkcOv7SzaxwUoKeHpoD+cgZaHZ19pguK+fY0LAr7pof9t0PTptTj9dsWTq3hmXZ3Yc38FZnydMjF8QeFmnhwyL+c82pduxBA+A9VxbPpaFhV7RdKM9BRVJl9Rwa1hw3zVX8SP+ZU4klMs2nehwHFUckU5bPvmGUzeEilCjrZ90wyuZgkcozl/pRUGHE8mQBbRtG2RwqgmmygpYNo2wOFMks86ggBRVFNEuW0K5hlM1hIpwka2jVMMrmIJHOMYcaUlBBxHNkEW0aRtkcIvIpZlBECipHgBRZRYuGUTYHSJAMWcb1DaNsDo8wCSZfRgoqRaAEWcfVDaNsDo5g+bGQaxtG2Rwa4dJLvJAUVIaA6bGSKxtG2RwYIbNLu5IUVISg2bGU6xpG2RwWYZNLupQUVILAybGWqxpG2RwUwXNjMdc0LNuFvOp1FHKc3S58agkXU1DQetKbHJdCjJAaq7le0FbN/OZmipFZutWUE/RwWwua3+x2UTJjOdmDLiROYsmWU0rQbpW55nLJcXOqiJQY67myApWjV4/jsy8mW9BYeaVaT46DeiZaXtkXlIIuIV5aiRZUXNDMlkKMmFbuFfWTf+JLIUbNKvOS8hA/T9ykkiwpBfVJ5KTyrum5oRnb3E2sj2DIcinE2DnF3r8IFoJur58Otzfl9ma8cZ5LIUbPKXoAAqwX1NzD3Bf3o3fZy1wX8oqfUvwI/GMn6LaSc2wAqcx1KUSAlABC8I3NIf7muLl+Om7GD/FZ9qAIGSHE4Bmri6Ti6vH0MHEKmuVSiBAZQQThFaFhpvyWQsRICCMKn6wXdHD8DrFfLYAkBBKGP+wukgLuVwko+aDE4Q2LQ/zE+JLAfpUAkw9MIJ6w6UGLmbtEXverA5x0cCLxA+/FewEoHaBQfEBBfYCUDVIsHrARtDrIXz9t3a7l0yojVDZQwThjc5F09bgzd5KcDE2qiljJYEXjit04qLmBOXEv3ud+NQCWDFg4btiNgxpB3UabUioiWi5o8Thh34NuJ59Y9rZfBcDlAheQA9bnoP3zIML7xQcvFbyI7LG8ii/MvCFB9osPYCqAIdnCcVBXEDNBjMkSCuoKZCaQQVlh98Ay78X3YCaCGZUNNlfxTpfva/eLDmgioGGth8+DuoGaB2pcq+ET9W7A5gEb2EoszkEP79xGmNbtFxvcNHAjW4eNoLe8SOoATgM4tDXYHOKnvnDsfb/QIGeBHNsKeJHkAnQW0MEthhdJDmAngR3dUkQvktrFvJz2iwx4EuDhLUPkW519k/FWKRQPPQf0+BYhcy++nZIp8R4UPgf4ABdgJ+jseaiZ/y51QfFTwI9wHiFBy3J79UhBY6MgxDnEBDXTgCctqIYMNMQ4g5ygVf/5CQWNjIogJxEU1Cz1ka6gOhLQEeUUFsNMf23+Pv0563vxShJQEuY4NuOgde+5X/awSKprdWqJX0uco9h87bi4M0PxVo+MJLNWp5r41QQ6gs056N71Wbs1+8VET/h6In0dq4uk0bU7BPaLiaLwFYX6GnZX8fu5aUUSX6tTU/SaYn2FlYIueAzEkPpanaqiVxXsC0QeFkl9pTldweuK9jkigqa+Vqey4JWFewl70PVoi11bvBfIPA+a9lqd6mJXF/AAGUGTXqtTX+j6Ij6z+ir+/viFh3kbNNdMYegKQ+5YLehd7oJqjFxjzC1rD/G7ReOgHvcLh8rIVQZdY/E0U949qM7AdUZtELpICr25cCgNXGnYdoLWs4dluogC4w6M5fOgg6FO4f2CoTVutYGvF7S7TTR2j8jzfrFQGnapN3Kbr3w0XWeWSyEqDdugNHT2oGvQGXWD0th5DroGnVG36AyeV/ErUBl0j87oOQ66ApVBn1EZPgVdjsaYh6iMn4IuR2PMF2hMgIIuRmHIz9CYAQVdjMKQn6MwBQq6FH0Rv0RhDjZ3kuymZbLcLwz6In4FfUnY9KDmoWXXuW/UVUpdwK+iLwvLQ7yzo+oqpS7g11GXhvU56M7tSx/aCqUt3jHU5WEnqJmA8b48Pdg/L6KtUNriHUVbIhaCmu+8N2bOPHG3n7hjr6xOysKdQFsmNlfxC54T2VanqIffPo0vjaysTsrCnUJZKjLjoNuqh93WHqcxN5OuaKdRlouNoEa/yUmW636zWRQ5jdntdEU7g65kLATd1p3icTM+XN8sBHL6b5lID6oq2Fl0ZSPznaR+8Zl2zRqH/SKgKth5VKXj8J2kqUv4XXMhNT6XvaYiaYp1EZoSsjjEN99GOtzmcidJUagL0ZQRv5M0i6JQl6IoJenH7fQvhagn0uUoyinw86AKl0LUE+kK9CRlIejsIl1e9xsbNYGuQk9WNuOgrut0rtpvbNQEug41admMgy64fE9mKUQtca5FTV72A/VTpLMUopY4V6MlMZuB+tmvJKWzkJeSMC3QkpnFOejsUscJLYWoJEwblKRm9a3Ouav4ZHpQHVHaoSQ3mXHQVJZC1BGlJTqSExqoT2MpRBVBWqMjOxtBK/uun7Zu34xXUR0VQdqjIj2bi6Srx+rMctFwqIf9RkRDjC6oyM/ueVBz6TP5PKi//UZEQ4xOaEjQbqDeCJr8Kh8KQnRFQYr2Peg28VU+8CN0R0GO1uegya/ygR+hB/CTtLyKT/+JevgAvYCfZeAHlqU25x/4AP0AnyYFfR30+HwBn6fIvXif+40EenzeQE/Uugd1G2VCrwt4eB5Bz9T+EL91mqkevC7g4fkEPFV7QVMeqMeOzjPYydoLmvCtTujgvIOdrbWgU7Pb+dxvDKCD8w90uvZX8U53OqGLghybBND5chz0JcixiYCcMAV9AXBoQiBn7DBQ7zRWD1wT4NCkAE7Z+mvHyT7NhBuZILhJ2zwP2pg59oViz/sNDWxgouBmbXGI/6J50C7RgXrYwGSBTdu+B03ziXrUuKSBzdvuifqyXyZBfL+BQY1LHNTErZ+on+4/d/Vqs6W6KcBBwwoBaOoy46Cme23uheoSFDOqMIDmLiJoM3lYvVo3BVUDZvKWh/jpqW+66Rer6yhVgkIGFQzM7K2/djw19U0//eL2hoLqATJ9+4kbpp4H7X5X9bWKBEWMKSiIBbC5F79g6pvuRujpQY+ggCEFBrEC9j1ocgP1gCGFBrAE1uegyT0sghdRBPCKYD1Qv/BGkpqLJLiAooBXhcAPLOOu1QkXUBzgymB3Dhpwv4FAiycWcHWwu4oPuN9AoMUTDbRC2FwkLXgQVNtanWDhxASsFA7fSZoaqFe2VidWNHEBq4XgwyI1Olaaw4omMljFEBFU21qdUMHEB6ocKwVddoWkrAdFigUBqHrYCDo/0KRrrU6kWCBAKoiMoKrW6gQKBQWgkggJ6m+/4uBEggNQTSgoTiRA4BQle0FhAsECpiy5C4oSBxwohVktqI+p7dbsVxaQMABBqUzgx+2kNmcLSBiIgJQmb0ExogAFozhZCwoRBCwY1aGgZAyI8uQsKEIM0CAUKGNBAUJAB6BE+QoaPwJ8AGpEQckE8YuUraDRA9BB9DLlKmjs/ashdqEyFTR22RWh5ZNKSlD6uRwKGgEKugIlH1VKgtLPVej4rBISlH6uRMWHlY6g9HM1EScjzE9Q+mmBgo+LgmZNtKplJyj9tCNW3XITlH7aEqlyIoIu+GoderrkBXFqJ9ODji6PZLc5b9BPF6JUT+gQf3q48bk5T9BPN2LUT+ocdD+zjBJ0rmSECBXM6CKJfroTvob5CEo/fRC8itkISj/9ELqO0oKiLIVIP30RuJKBe9BYSyHST3+ErWUeh3j66ZOg1cxCUPrpl5D1FBuoB1oKkX76JmBFZQSFWgqRfvonXE1FBIVayIt+ShCsqkJPM+EshUg/ZQhV19R7UPopRaDKSp2DgiyFSD/lCFNboat4jKUQI34ZMQeClDflcVDqKU2ACicsKP2UR77G6QpKP0MgXuVUBeXpZyCkC52ooNQzHLK1TlJQdp9BES13ioJSz9AIVjxBQelneORqnpygPLxHQazsiQlKPaMhVPq0BKWeMRGpfkqCsvuMjMQHkI6g1BMA/x9CMoJSTwx8fw6JCMruEwbPH0USglJPKLx+HAkISj3h8PiRqBeUekLi7WPRLWjwOZ7IYjx9NpoFpZ3g+PiA1ArKzlMD7p+SUkFppxocPyqNgrLz1IXT56VOUNqpEftPTUhQmekXw8/MTLxh+eHJCCow/SLlTACLD1FEUN+Th1HOhFj5YYoI6nH6xQgLLhBxVnyqwD0o3UybZZ+v1Dmoy/SLURaqIVGY/ayFruLtpl+kmbky/smrGwcleUFBCTTSgqKs1UmUErgH7Zfq/BchiwgrqNTmSKrwHJRAo+phEZIfah4WIXkCfKuTEPyHRUjmsAcl0ER7WISQRYgIOv+wCAxIXTljcUBdwAtByouxOKAu4IUg5cVYHFAX8EKQ8mIsDqgLeCFIeTEWB9QFvBCkvBiLA+oCXghSXozFAXUBLwQpL8bigLqAF4KUF2NxQF3AJC8oKIGGghJoKCiBhoISaCgogYaCEmgoKIGGghJoKCiBhoISaCgogYaCEmiSFHRfFFePsYPoOfxqbCarwNQza418XxyWFAXdV3buYQw9bkanWgvL6aGqya64iR3HOhIUtJkAZQvyQewn5gIMy+HWTLsxNjc2KgkKCvVB7Iu7sXms4oBzaFlGioK+Mx8BjhY4kRi2UNHMk6CgTR+B01NACTo6qxYqFFQcJEH32q6RUhSUh/hR1PWfaQqKdJFUIgm60+dnioJiDTMBCdpP76qJBAUFG6iHEfRwq6//TFPQqqtAutWJIuiumXwYqDJLSFJQkg4UlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FJRAQ0EJNBSUQENBCTQUlEBDQQk0FHSWw21R+J8XbtesCHPcaJzRKyAUdI560sLDrefZHDsxKegMFHSGZr5m7yIdN/elxHaTg4LO0E2Eu7t+amYwNP9u/q4lq/44fvGtWQtp16zjdtx8tWlOCYatew339T/MaUM9K2MtaDfz8eHWvPXO/PL+/L5285lCQafpezgzI+6u+s+80P7dC7qp5a1eNHPEHjdty2HrfvLYfaXecXNz0YP2Mx8fbuu14Izs5r9+g2bzuUJBp+lEMjPfPz9vPAt61724f/Oh/uFF63YW22Z68kr2gaD7/gqs1rj94/5yg9lCQacZCtqsztCt0jAU9L5b9qYWq3m1a9X/4vzWrlW9jV+fD//1b7s/LjeYLRR0muEhvr1e6q6bngnaTLBdnAVtW/W/qN9aC9q9p/7x6rt33aTcl4JebDBbKOgMg4ukBT3o4NXLHrTllR70rtxW55j1BdErPWg56MSzhILO0HpmRHp5Dnp3cVAv21cHZ6blM79eOwfthb/sQS83mC0UdI7BQL25rj493HR/nx6un04P3THYvFhuW/XMH8PW5hf11l67iu8XeL0Q9HKD2UJBZxnc6rwcB63sKoqv+vNJ82Jl2rk/HbbuBzL33WjpQFBjbLOnoaAXG8wWCkqgoaAEGgpKoKGgBBoKSqChoAQaCkqgoaAEGgpKoKGgBBoKSqChoAQaCkqgoaAEGgpKoKGgBBoKSqChoAQaCkqgoaAEGgpKoKGgBBoKSqChoASa/wOUD+dYMKZO0AAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>Since each k-mer is unique, the occurence (x-axis) of each k-mer is
+1. So the k-mer spectrum has a peak at x = 1. The height of the peak
+corresponds to the frequency of k-mers with that occurence (here
+frequency=7, because we have 7 different k-mer sequences).</p>
+<h2 id="building-a-k-mer-spectrum-from-sequencing-data">Building a k-mer
+spectrum from sequencing data</h2>
+<p>However, when we sequence a genome, we have many reads (millions),
+that are spawned from many copies of the original genome.</p>
+<p>Let’s simulate sequencing data from our original read and build the
+k-mer counts again:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 6 copies of the read:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>reads <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="at">x =</span> read, <span class="at">times =</span> <span class="dv">6</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>kmers <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># For each read:</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(reads))){</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  read_j <span class="ot">&lt;-</span> reads[j]</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We obtain the k-mers:</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nchar</span>(read_j)<span class="sc">-</span>k<span class="sc">+</span><span class="dv">1</span>))) {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    kmers <span class="ot">&lt;-</span> <span class="fu">c</span>(kmers, <span class="fu">substr</span>(<span class="at">x =</span> read_j, <span class="at">start =</span> i, <span class="at">stop =</span> i<span class="sc">+</span>k<span class="dv">-1</span>))</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(kmers)</span></code></pre></div>
+<pre><code>##  [1] &quot;CAG&quot; &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot; &quot;CGA&quot; &quot;GAT&quot; &quot;ATT&quot; &quot;CAG&quot; &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot;
+## [12] &quot;CGA&quot; &quot;GAT&quot; &quot;ATT&quot; &quot;CAG&quot; &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot; &quot;CGA&quot; &quot;GAT&quot; &quot;ATT&quot; &quot;CAG&quot;
+## [23] &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot; &quot;CGA&quot; &quot;GAT&quot; &quot;ATT&quot; &quot;CAG&quot; &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot; &quot;CGA&quot;
+## [34] &quot;GAT&quot; &quot;ATT&quot; &quot;CAG&quot; &quot;AGT&quot; &quot;GTC&quot; &quot;TCG&quot; &quot;CGA&quot; &quot;GAT&quot; &quot;ATT&quot;</code></pre>
+<p>Obviously, we now have multiple copies of the same k-mers (they are
+coming from copies of the same read). This can be checked by the unique
+k-mer sequences:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">table</span>(kmers))</span></code></pre></div>
+<pre><code>## kmers
+## AGT ATT CAG CGA GAT GTC TCG 
+##   6   6   6   6   6   6   6</code></pre>
+<p>And we can print the density again:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>kmer_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(kmers)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(kmer_counts), <span class="at">main =</span> <span class="st">&quot;k-mer spectrum&quot;</span>, </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Occurence of k-mer&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frequency of k-mers&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Since we have 6 copies of the same read, we have 6 copies of each
+k-mer. On the k-mer spectrum this is represented by a peak at x = 6. The
+frequency (y-axis) is the same as before (we have 7 unique k-mer
+sequences: “CAG” “AGT” “GTC” “TCG” “CGA” “GAT” and “ATT”).</p>
+<h2 id="sequencing-errors">Sequencing errors</h2>
+<p>Reads are not perfect. Often, sequencing errors appear in the reads.
+Let’s add a read with an error to our sequencing data:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>read_with_error <span class="ot">&lt;-</span> read</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Changing A to T in one of the reads:</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">substr</span>(<span class="at">x =</span> read_with_error, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">stop =</span> <span class="dv">1</span>) <span class="ot">&lt;-</span> <span class="st">&quot;T&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>reads_with_error <span class="ot">&lt;-</span> <span class="fu">c</span>(reads, read_with_error)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>kmers <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For each read:</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(reads_with_error))){</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  read_j <span class="ot">&lt;-</span> reads_with_error[j]</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We obtain the k-mers:</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nchar</span>(read_j)<span class="sc">-</span>k<span class="sc">+</span><span class="dv">1</span>))) {</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    kmers <span class="ot">&lt;-</span> <span class="fu">c</span>(kmers, <span class="fu">substr</span>(<span class="at">x =</span> read_j, <span class="at">start =</span> i, <span class="at">stop =</span> i<span class="sc">+</span>k<span class="dv">-1</span>))</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">table</span>(kmers))</span></code></pre></div>
+<pre><code>## kmers
+## AGT ATT CAG CGA GAT GTC TAG TCG 
+##   7   7   6   7   7   7   1   7</code></pre>
+<p>We can see that a new k-mer appeared (TAG), due to the sequencing
+error. Since the error is only present in one read, the occurence of
+that k-mer is 1.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>kmer_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(kmers)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(kmer_counts), <span class="at">main =</span> <span class="st">&quot;k-mer spectrum&quot;</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Occurence of k-mer&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frequency of k-mers&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAAAt1BMVEUAAAAAADoAAGYAOjoAOmYAOpAAZrY6AAA6ADo6AGY6OgA6Ojo6OmY6ZpA6ZrY6kLY6kNtmAABmADpmOgBmOjpmZgBmkLZmkNtmtrZmtttmtv+QOgCQOmaQZgCQZjqQkGaQkNuQtpCQttuQtv+Q2/+2ZgC2Zjq2ZpC2kDq227a229u22/+2/7a2/9u2//++vr7bkDrbkGbbtmbbtpDb29vb/7bb////tmb/25D/27b//7b//9v////eAcy8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAASx0lEQVR4nO3dC3fjRgGGYWW7SaBQiFsubQyUQgy0SxdTIM7a/v+/C83oYjmxLqMZjT5r3ucckmx2PF7st7rZlrIjICyb+x8AdCFQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCPQdpvs3ccY93P4e5S7uU4E2i5SoJ++ivPfwXUi0HaRAo21oL5OBNrOlrNfZe8+FH/Of7z7z+fZzTfHf99n75/Mrw5/y7KbXz3nP22zm+++qof++/P89198KCb5/jdZ9v7D+fDj8ad8yGffmAG5dx+r2xe55nf1cOn+0kOg7Uwrh3V2U6WRB1P4vGiq/s37jyZQ47aIr/iDHbIpb2NmaQyvfv9wCrS4/Xmgr+4vQQTaLm/lx3WWPVZ/NsE8HH/KY/nGJPhgR3w4vtybH/Nf3H44/rcaePdsBtohZkz+893Z8F2W/fr508pkVyRZ3f5VoOf3lyACbZe38ttmF3kw+RKy+GozsxmZtvKmto2S8798/0M9if296a45vKzyix+Op0AfyzttBHp+fyki0HabatVcrGxv/7cyi8G9/WqDyb/U6+/taVPgmG8X5D773fOx3gUyf90Yno8otwZOgRa3f7UNenZ/KSLQdpt6s7Il0F12OdDjp6+KX/+1DjQf+tgYngd6d7qbt4FWC2gCJdB2eaC3/7Br3vYlaL1aPws0T/Tbz4u4z5eg1fC+JSiBVgi0XbndWJf0Jpjix8KrQHOHPxYbm81t0FeLzd0v//I60OL7LiPQAoG2s+XsTjs/b4PZmIOUn2zDzUDtLrpZz9slaHMvvh6eD/nV88EeIyhueQo0n/jTmkBLBNrOBtpYGb8NpjxS2QzM+tvp2Gd1HLRx2NQOLH9/Z3MuDtTb29d7UgRqEWi7xuagdSGYT3/Ke7KvGJ2v4s3LRNkvy1eSfvxTOaYxvHwl6ffH4uWl9x/q27/kO1hffM9efIlAJ8Yr7X4IdGIE6odAJ0agfgh0YgTqh0AhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhLXCgGTDIXIGGnQ5LRaCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCQRqCIzem5J1BENvzldTs6+MBZpsP1IFAoy9yefAJFXAQKaQQKaQQKaQQKaQQKZVn9xWF80IG5/eoh/7rLsuzdxwDTYUF0At3ePpufHv2nw4LIBFqmaTP1nA4LIhPoy70NdNeykifQRMkEyhIUl4gEak4JcXesdpc8p8OCSAR6tI3ePOU78i19EmiqVAKNPB2uBYFCWXb2bfgNAg48t2UvHg1ygb6exfmselgU9UCnmg5XgkAhTSXQbb4SLw7Usw2KBpFAtzdPx/3KHKknUDRpBHpYP9ivt88EijMagVZvstvcPhMomjQCLZaguc0dgaJJI9B6xb5ftb2nnkDTJBJovhdfrOQPawJFg0qgsafDdchefR9+i3ADZ5kO1yF788PgWwQbOMt0uA4ECmkECmkECmkECmkECmkECmkECmkECmkECmkECmkECmkECmkECmXZhZ8G3yTUwFmmw1XILv449CaBBs4yHa4CgUIagUIagUIagUIagUIagUIagUIagUIagUIagUIagUIagUIagUIagUKaTqCHdXE9uZbT1xJokrKWn4feJsxAY1tdhrv1etwEmqCs9Q8DbxNk4LFxEYU81dtn7+mwEDKBVpehye04Rz0qMoGyBMUlMoHWF/lgGxQNOoGaCyRZLctPAk2SUKCxp8M1iBTofvVgLrfdunAMe79YjkiBbm6fX+7vjpu7ITfjWp2oxQnUHEPa5TtBbQeQumepud8W1y5eoJs8zrZlY+D7xXLEWsXf7Ve3z/vVoFW89/1iOaLtJGU3T4d1Z5/5TlRxKJRtUNR0DjNtb56OxSKWQFGLE2jjdcw2xZDD+vaZQHESbyepRzVkc/tMoKhFWsX3H1+qF7KbOwJFLdYSNOt5t/xpyzMfS6Co6Owk1W9nOqwJFKWs84/DbhRg4CzT4QpECzRfcd8+b3r35cPcLxYjVqC7m6eteSXJq1ACTU+kQM0u+rbjCKfjdEhGpEDNQU4T6Kh3M7nfLxYj8hJ04/WOZQJNT9xt0PpzceMQaHpi7sVn2c3T0Fv63S8Wg+OgkEagkBYr0OrFePbi4STaXrzfB44d7xeLEfE4qD8CTU/E46D+CDQ9sbZBX37md4TJ7X6xGNECvWcnCSNEW8V7fSDe9X6xGOwkQRo7SZDGThKUvXnKBzUwzac6A94vliJWoGEQaHJiBuq/HUqgySFQSCNQSCNQSCNQSIt2mOnPxffDHzjMBAfxjoPapeeO46BwEm0Vb66/uV9lfm8ZIdDkxNsG3fm+jORyv1iKiDtJrdcwHo5AkxNzL37nd1oRl/vFUkQJtH6nSOdavtiP6twSINDkCL1ZxAZqTjDW/u5mAk2OWKBlmtuWD9ETaHLEAn25t4G2nUWUQJMjFihLUJyTCtTsRN0d65ed/KbDIkTai3/cfznkI0n2ksgdB0wJNDUXnvEhETgH+jAs0GD3i4WIE6i9EDwfmoO7SIHmC1GnJSgXk0UhWqBeTsvfINPhekQM1J49jIsowEm8QItdcy5DAyfRAq0+j9R2CN5xOiQi3k5S+f4PLoUIF0pL0AFvyiPQ1Ehtgx7WfYtXAk2N1l5872mYCTQ1YsdB+z4UQqCpEQs08nSQR6CQRqCQRqCQRqCQFvGVJM/TMrndLxYi4hLUvGmZ84PCzaVnfEAFI1fx3o0SaGIuPuHTBVok6vF2EQJNTNxAzWmXHo+H9fh33BFoYiIGat6rVJTp8Y47Ak1MvED3K89Pe7jdL5Yh+jaoJwJNTMxAN/kK3vckywSamIiBbuwG6H7ldbieQBMTcxuUzyTBWbxA688kESiGi7iKLz6N9HLPK0kYLuZOEmcWgTMOM0EagUJaxEAPa84PClcxj4P6XqfT6X6xDDGPg3pfqNPlfrEM8Q/U+yHQxMQ8UB/gI0kEmpiW57s/gxHboP6XOna5XyxCxEDrcyuyF4/BYi5BgyDQtBAopEUNNF/J3z5veMMyhou6k3TztL199jwcSqBpiRioeT+oOT897wfFcFH34h9toJ3vqO99vZ5A0zLDEnTTcdaGbfWRutbP1hFoWuJvg3Zd5aP6VMix/WI1BJqW2Hvx3e+ob7xc37YhQKBp0ToOyhIUr2gFerrKF9ugsNRei68Gte5IEWha4i9B/c7bQKCJmWEVv+HUNxhshkCHLULbXm8i0LTMEOiolzpPl+l2vy2uV+vT3dvB6EA5ux2Gixlo7w6623RIwQxLUE8EmhQChbQ5VvEdx+oHDCHQpERdghYfO+56N9PxsO7bxSfQpMQM9LAuymx7G0g5qGcfn0CTEnUV/2XxRrvuA/V9Z3cg0KTMsQTteke9w3RIQdxtUPte5a3fOcAJNClxDzPZnXS/4/QEmhaOg0IagUJa9FU8p76Bi9g7SZz6Bk7iHmbi1Ddw0/5sT/Ja/IBT3wyfDgnoeLb7Qhi/BOVAPYaKGuiAU984TYflixto/6lv3KbD4kUONAQCTUn0bVB/BJqSqIFypTm4iryTxMVk4SbyEpQLecENO0mQRqCQFi/QMHtILveLBYgcaIgDTQSaEgKFNAKFsq4nm0Axu84nu6cEAsXkCBTSogbae946l+mQhIiBBkOgCSFQSCNQSCNQSCNQSCNQSJMLtDgtzq7rUBSBJkQzUHsO+9a35xFoQiQDLdNsu9QCgSZEMtCXexto2yfsCDQdXgmyBMXUFAM1r9XfHavdJc/pcN30Aj3aRm+e8h35tvc9EWg6JAONPB2EESikSQfadqJwAk2HdKCvZ6kFmQ7X4JoCnWo6CCNQSFMM9LDu+dwSgaZDMNBtdfyz9UAogSaj96n2eal+xMDj2eeSealzCbz2aQUDbbzJLsibRdjrn1fmtUARDDTwEjRzHI+wsvrL+JuPHjDVNmi5CA2xDZq53z8C8n38FQOtz0DSerlE50ApdCbZq++jJxg34AqOgxLorAh06EgKnUN24aexM4wZQKDoRKCDBxLoHLKLP46cYcSAKwqUQmeQtfw8boYRQwgUXbLWP4yawX2IeqD+DxB8EKjLOAKNLev406gpnIcQKDpknX8cM4XrEPFAA/wXDA8E6jaMQuN6/XgTaM8wAo2LQB1HEWhcbx5v9ydg0C06Bl1XoBQaF4G6jiLQmN4+2gTaM4pAY7rwaDs/AYsONMQDhPEI1H0QgcZz6bEm0J5BBBrPxcfa9QlYcqBBHiCMFuLxH3e8e8z9EWhqLj/SBNozhkBjaXmk3Z6AJQca5L9gjEag44ZQaBxtjzOB9gwh0DhaH2enJ2DBgYb5LxhjBQnUP6/rC5RCowiwTHMZS6BwE+LY+aIDDfMAYSwCHT+AQKfX9RgPf/wDpKwaaJgHCGN1PsZTRLOkQCl0ct2P8AIC9b0MTaAHCCMtPVDvy9D4/TU8ea3fnId1Dp4kUO+LKAR6gDDS0gP1vgyNzz4+vHkcpHYe1Ddacgka6AHCSOPfKOE8pnf4VNugXpehCfQAYZxAi0fXpyhmoH6XoZlg/YHhhj2yE6zlLt5A8DjoFFvgGGzo49p3dcoRz8+lm8gFOvyqnFy/cwqhXmgP9eRMHejWbS/eLToSDczxor3to8M9M5GXoFnlX8AgcQOdajosldw2KNAk+mYRoCD6ZhGgIPlSJ1DRfLMIUGIJCmmSbxYBKopvFgFqHAeFNAKFtNkCBQaZKVA3Qe+cyWada6qSCDThyWT/YdNPO8OdM9mscxEokwWfTPYfNv20M9w5k806F4EyWfDJZP9h0087w50z2axzESiTBZ9M9h82/bQz3DmTzTrXIgMF+hAopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopM0Z6MvP204z6sqet7TlbDzutll28xRqstym9UQsjooTu9yFmezlPthUu/KjxI/9Q53NGOh+1XoeXEeHdR7UNtTDbS4QsQtY6K79TEGOXn4W8F+V/6P2q0APmRF0spP5At11nKjZ0cu9+W+37cojjvarB5N8sEc7X+yFCrTtpJcjFGcqDPSQWSHnapgt0F32EPDxtjMGXOoFDHR7+8dQgW7DLaNCLoyLCe+DbWKdmXMbNHCgm5CLg2Cx5yUE2wbd/CLYpvbu3T9XATfbwz76TcsJtPWcpWOmCjaXWZWGCnS/MhNtgvzTtmb7KuiGzDQL0OUEugu1j2Qd1oGiMqeiDrYEtcI8asUqItwzEHL76sxSAg24/CzmC/OA2029sIEWe4S+il2aMHMZYf8/Niwk0G3gPkM9ddvwRwjD7N4Uj32wXaXJ1vALCXQbsIAizZBL91BLl5D/suKKLcH+X4ZbFL+2iEDDHuIwPTUuaBJmwjATmc3sMDtJduM43P/LyTZBlxFouSIN9SBtAr9qF277LOS/bBf01eGJDjLxZhGII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII9Be5not4a+wsi3OjDTdeQsXgkD72FM7vtwHvsZKFSaB9iDQHuU5XkOHVJyfk0B7EWiPTbnoNOfTtOd5NH8uvtvI8i/7L781lyTYFucz3K++XhWbBM3RdYbFWQ/NZoM9Y6ENtDo/9Mu9uemD+cvH0+3K6RNFoN3qJZw5Rau58oD5Rfm9DtRefcP80pxJd78qRzZH16fY3eXpmWuyNZeg9fmhX+7tFfNM7OZ/9YRTnf/9GhBotyokc5Lr19uNp0Afql/u3n20P7wZXZ6stzincR57I9BdvQdmMy6/PJ5PmCwC7dYMtDoRe/X9FOhjdRJsG1bx22pU/Renm1aj7By/OK3+7d9WX84nTBaBdmuu4qtrYlTfzwOtrudRB1qOOrsUcBFodRv748139aU2zgM9mzBZBNqjsZM0YAna+O35ErR0YQlaXInO7hBdWIIeGwvxJBFoj7IzE9LbbdCHs5X6sfxtY8v0+KqvS9ugp2u4nAV6PmGyCLRP40C92a8217csv5vrJR7W1TrYXlxwU6ZnvjRHm7+ws13ai68vxHoW6PmEySLQXo2XOs+Pg5pLwWdf19uT5pd5aaflaXN0fSBzVx0tbQRqii3uqRno2YTJIlBII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BI+z+9BOy1XFAL/QAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>This is represented on the k-mer spectrum with a peak at x = 1. There
+is another peak at x = 6, because one of the k-mers (GAT) has been
+replaced by (TAG) due to the sequencing error.</p>
+<p>With real datasets, since we are dealing with so many reads, errors
+are represented as a large peak at the start of the spectrum:</p>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>The left part of the plot corresponds to k-mers with very low copies
+(likely to come from sequencing errors), and this part of the plot if
+often ignored in downstream analyses (eg: genome size estimation).</p>
+<h2 id="what-about-heterozygosity">What about heterozygosity:</h2>
+<p>If a genome is heterozygous (and diploid). Then each read is as
+likely to come from any of the two copies.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We have two reads from the same location, but different haplotypes:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice that the 3rd position changes from one read to the other (G&gt;C) </span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>read_h1 <span class="ot">&lt;-</span> <span class="st">&quot;CAGTCGATT&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>read_h2 <span class="ot">&lt;-</span> <span class="st">&quot;CACTCGATT&quot;</span></span></code></pre></div>
+<p>Our sequencing data will have a mix of both reads:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>reads <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="at">x =</span> read_h1, <span class="at">times =</span> <span class="dv">3</span>),</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rep</span>(<span class="at">x =</span> read_h2, <span class="at">times =</span> <span class="dv">3</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>kmers <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># For each read:</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(reads))){</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  read_j <span class="ot">&lt;-</span> reads[j]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># We obtain the k-mers:</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span>(<span class="fu">nchar</span>(read_j)<span class="sc">-</span>k<span class="sc">+</span><span class="dv">1</span>))) {</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    kmers <span class="ot">&lt;-</span> <span class="fu">c</span>(kmers, <span class="fu">substr</span>(<span class="at">x =</span> read_j, <span class="at">start =</span> i, <span class="at">stop =</span> i<span class="sc">+</span>k<span class="dv">-1</span>))</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">table</span>(kmers))</span></code></pre></div>
+<pre><code>## kmers
+## ACT AGT ATT CAC CAG CGA CTC GAT GTC TCG 
+##   3   3   6   3   3   6   3   6   3   6</code></pre>
+<p>We now have a k-mer occurence of 6, for k-mers that are from
+homozygous regions, and a k-mer occurence of 3 (ie: 6/2) for k-mers that
+are from heterozygous regions.</p>
+<p>How does this translate on the k-mer spectrum?</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>kmer_counts <span class="ot">&lt;-</span> <span class="fu">table</span>(kmers)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">density</span>(kmer_counts), <span class="at">main =</span> <span class="st">&quot;k-mer spectrum&quot;</span>, </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Occurence of k-mer&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frequency of k-mers&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>We can see two peaks:</p>
+<p>One at x = 6, corresponding to k-mers from homozygous regions (with a
+frequency of 4, because we have 4 unique k-mers sequences with that
+number of copies: “ATT”, “CGA”, “GAT” and “TCG”).</p>
+<p>One at x = 3 (6 divided by 2), corresponding to k-mers from
+heterozygous regions (with a frequency of 6: “ACT”, “AGT”, “CAC”, “CAG”,
+“CTC” and “GTC”).</p>
+<h2 id="what-now">What now?</h2>
+<p>From the number of peaks, and the height of the heterozygous peak,
+you can estimate how heterozygous the genome is.</p>
+<p>Based on the assumption that each k-mer maps uniquely to the genome,
+the occurence of the homozygous peak (ie: its position on the x-axis)
+should represent the coverage of your sequencing data.</p>
+<p>You can also estimate the genome size from the k-mer count. A good
+tutorial for this is available here: <a href="https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/">https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/</a></p>
+
+</body>
+</html>
